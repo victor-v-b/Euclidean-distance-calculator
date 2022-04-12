@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<!--biblioteca para http requests "axios"-->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<title>
+	Calculador de distâncias ಥﾉ
+	</title>
+	<style>
+	form{
+	  margin: 3px;
+	}
+	div input{
+	 border-radius: 10px;	
+	padding: 5px;
+	margin:2px;
+	}
+	.hidden{
+	visibility: hidden;
+	}
+	p{	
+	text-decoration: overline;
+	display: inline-block;
+	}
+	body{
+	background-color:#FAF9F6
+	}
+</style> 
+</head>
+
+<body> 
+
+	<div id="div">
+<!-- rua numero bairro cidade estado; -->
+
+<input id = "add" type=button value = "Adicionar Endereços"> </input> 
+<br/>
+
+		<form id= "form_1">
+			<input type="text" placeholder="Rua">
+			<input type="number" placeholder="Número"/>
+			<input type="text" placeholder="bairro"/>
+			<input type="text" placeholder="Cidade"/>
+			<input type="text" placeholder="Estado" maxlength="2"/>
+		</form>	
+	</div>
+
+	<input id ="btn_submit" type=button value = "Calcular"></input>
+	
+	<input id ="btn_reveal" type=button value = "Revelar" disabled = true ></input>	
+
+	<div>
+	<h3 class ="hidden" id="coordenadas">Coordenadas</h3>
+	<p id="lat-lng-display" ></p>
+	</div>
+	
+	<div class ="hidden" id="distancias">
+	<h3>Distancias euclidianas</h3>
+	<p id ="distancia-display" ></p>
+	<p id ="menor-maior-display" style="background-color:#FFFDD0" ></p>
+		
+	</div>
+
+</body>
+
+<script type="text/javascript" src="api_script.js"></script>
+
+<section>
