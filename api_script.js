@@ -229,15 +229,21 @@ function comparaDistâncias(){
 	maior = listaDistancias[0];
 	menor = listaDistancias[0];
 
+	maiorNome = valorListaDistancias[0];
+	menorNome = valorListaDistancias[0];
+	
+	//itera pela lista de distancias e nome das ruas comparadas
 	for (var i = 0; i < listaDistancias.length; i++) {
 
 	   if (listaDistancias[i] > maior) {
-		maior = listaDistancias[i] + ' ' +valorListaDistancias[i];
+		maior = listaDistancias[i];
+		maiorNome = valorListaDistancias[i];
 
 	  } else if (listaDistancias[i] < menor) {
-		menor = listaDistancias[i] + ' ' +valorListaDistancias[i];
+		menor = listaDistancias[i];
+		menorNome = valorListaDistancias[i];
 	  }  
 	}
 	
-	display3.innerHTML += 'Maior distância: ' + maior + '<br />' + 'Menor distância: ' + menor;	
+	display3.innerHTML += 'Maior distância: ' + maior + ' ' + maiorNome + '<br />' + 'Menor distância: ' + menor + ' ' + menorNome;	
 }
